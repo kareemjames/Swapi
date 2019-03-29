@@ -1,5 +1,6 @@
 package com.detroitlabs.swapi.Service;
 
+import com.detroitlabs.swapi.Model.Movie;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
