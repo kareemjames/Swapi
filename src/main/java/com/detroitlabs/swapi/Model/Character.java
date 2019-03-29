@@ -9,6 +9,7 @@ public class Character {
     private String name;
     private String birthYear;
     private String gender;
+    private String desc = "This an a description";
     //private Homeworld homeworld;
 
     @Override
@@ -47,7 +48,14 @@ public class Character {
         this.gender = gender;
     }
 
-//    public Homeworld getHomeworld() {
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+    //    public Homeworld getHomeworld() {
 //        return homeworld;
 //    }
 //

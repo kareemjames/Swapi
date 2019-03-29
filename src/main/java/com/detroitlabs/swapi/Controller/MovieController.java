@@ -32,4 +32,6 @@ public class MovieController {
         modelMap.put("singleMovie", singleMovie);
         return "index";
     }
+
+
 }
