@@ -1,17 +1,24 @@
 package com.detroitlabs.swapi.Service;
 
 import com.detroitlabs.swapi.Model.Movie;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
 public class MovieService {
 
-    public Movie fetchMovie() {
-
+    public Movie fetchMovie(){
         RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.USER_AGENT, "spring");
 
-        return restTemplate.getForObject("https://swapi.co/api/films/5", Movie.class);
+        ResponseEntity<Movie> response = restTemplate.exchange("https://swapi.co/api/films/2/?format=json",
+                HttpMethod.GET, new HttpEntity<>(headers), Movie.class);
+        return response.getBody();
     }
 
 }
