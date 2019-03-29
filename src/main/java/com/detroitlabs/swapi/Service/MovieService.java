@@ -21,4 +21,13 @@ public class MovieService {
         return response.getBody();
     }
 
+    public Character fetchCharacter(String characterURL) {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.USER_AGENT, "spring");
+
+        ResponseEntity<Character> response = restTemplate.exchange(characterURL, HttpMethod.GET, new HttpEntity<>(headers), Character.class);
+        return response.getBody();
+    }
+
 }
