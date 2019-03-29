@@ -9,7 +9,7 @@ public class Character {
     private String name;
     private String birthYear;
     private String gender;
-    private Homeworld homeworld;
+    //private Homeworld homeworld;
 
     @Override
     public String toString() {
@@ -17,7 +17,7 @@ public class Character {
                 "name='" + name + '\'' +
                 ", birthYear='" + birthYear + '\'' +
                 ", gender='" + gender + '\'' +
-                ", homeworld=" + homeworld +
+                //", homeworld=" + homeworld +
                 '}';
     }
 
@@ -47,11 +47,11 @@ public class Character {
         this.gender = gender;
     }
 
-    public Homeworld getHomeworld() {
-        return homeworld;
-    }
-
-    public void setHomeworld(Homeworld homeworld) {
-        this.homeworld = homeworld;
-    }
+//    public Homeworld getHomeworld() {
+//        return homeworld;
+//    }
+//
+//    public void setHomeworld(Homeworld homeworld) {
+//        this.homeworld = homeworld;
+//    }
 }

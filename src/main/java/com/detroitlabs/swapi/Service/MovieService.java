@@ -1,6 +1,7 @@
 package com.detroitlabs.swapi.Service;
 
 import com.detroitlabs.swapi.Model.Movie;
+import com.detroitlabs.swapi.Model.Character;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -26,7 +27,7 @@ public class MovieService {
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.USER_AGENT, "spring");
 
-        ResponseEntity<Character> response = restTemplate.exchange(characterURL, HttpMethod.GET, new HttpEntity<>(headers), Character.class);
+        ResponseEntity<Character> response = restTemplate.exchange(characterURL + "?format=json", HttpMethod.GET, new HttpEntity<>(headers), Character.class);
         return response.getBody();
     }
 
