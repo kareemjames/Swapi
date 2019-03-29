@@ -14,11 +14,11 @@ public class Movie {
     private String director;
     private String producer;
     private String releaseDate;
-    private List<String> characters;
-    private List<String> planets;
-    private List<String> starships;
-    private List<String> vehicles;
-    private List<String> species;
+    private List<Character> characters;
+//    private List<Planet> planets;
+//    private List<Starship> starships;
+//    private List<Vehicle> vehicles;
+//    private List<Specie> species;
 
     @Override
     public String toString() {
@@ -30,10 +30,10 @@ public class Movie {
                 ", producer='" + producer + '\'' +
                 ", releaseDate='" + releaseDate + '\'' +
                 ", characters=" + characters +
-                ", planets=" + planets +
-                ", starships=" + starships +
-                ", vehicles=" + vehicles +
-                ", species=" + species +
+//                ", planets=" + planets +
+//                ", starships=" + starships +
+//                ", vehicles=" + vehicles +
+//                ", species=" + species +
                 '}';
     }
 
@@ -91,43 +91,43 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    public List<String> getCharacters() {
+    public List<Character> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(List<String> characters) {
+    public void setCharacters(List<Character> characters) {
         this.characters = characters;
     }
 
-    public List<String> getPlanets() {
-        return planets;
-    }
-
-    public void setPlanets(List<String> planets) {
-        this.planets = planets;
-    }
-
-    public List<String> getStarships() {
-        return starships;
-    }
-
-    public void setStarships(List<String> starships) {
-        this.starships = starships;
-    }
-
-    public List<String> getVehicles() {
-        return vehicles;
-    }
-
-    public void setVehicles(List<String> vehicles) {
-        this.vehicles = vehicles;
-    }
-
-    public List<String> getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(List<String> species) {
-        this.species = species;
-    }
+//    public List<Planet> getPlanets() {
+//        return planets;
+//    }
+//
+//    public void setPlanets(List<Planet> planets) {
+//        this.planets = planets;
+//    }
+//
+//    public List<Starship> getStarships() {
+//        return starships;
+//    }
+//
+//    public void setStarships(List<Starship> starships) {
+//        this.starships = starships;
+//    }
+//
+//    public List<Vehicle> getVehicles() {
+//        return vehicles;
+//    }
+//
+//    public void setVehicles(List<Vehicle> vehicles) {
+//        this.vehicles = vehicles;
+//    }
+//
+//    public List<Specie> getSpecies() {
+//        return species;
+//    }
+//
+//    public void setSpecies(List<Specie> species) {
+//        this.species = species;
+//    }
 }
