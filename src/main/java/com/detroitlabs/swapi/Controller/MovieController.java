@@ -22,16 +22,13 @@ public class MovieController {
         Movie singleMovie = movieService.fetchMovie();
         List<String> charactersURLS = movieService.fetchMovie().getCharacters();
         List<Character> characters = new ArrayList<>();
-//        for (String characterURL: charactersURLS) {
-//            Character newCharacter = movieService.fetchCharacter(characterURL);
-//
-//            characters.add(newCharacter);
-//        }
-//
-//        modelMap.put("characters", characters);
+        for (String characterURL: charactersURLS) {
+            Character newCharacter = movieService.fetchCharacter(characterURL);
 
-        Character newCharacter = movieService.fetchCharacter(charactersURLS.get(0));
-        modelMap.put("newCharacter", newCharacter);
+            characters.add(newCharacter);
+        }
+
+        modelMap.put("characters", characters);
         modelMap.put("singleMovie", singleMovie);
         return "index";
     }
