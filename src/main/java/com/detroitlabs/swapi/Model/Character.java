@@ -10,6 +10,7 @@ public class Character {
     private String birthYear;
     private String gender;
     private String desc = "This an a description";
+    private String url;
     //private Homeworld homeworld;
 
     @Override
@@ -18,6 +19,7 @@ public class Character {
                 "name='" + name + '\'' +
                 ", birthYear='" + birthYear + '\'' +
                 ", gender='" + gender + '\'' +
+                ", url='" + url + '\'' +
                 //", homeworld=" + homeworld +
                 '}';
     }
@@ -55,6 +57,15 @@ public class Character {
     public void setDesc(String desc) {
         this.desc = desc;
     }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     //    public Homeworld getHomeworld() {
 //        return homeworld;
 //    }
