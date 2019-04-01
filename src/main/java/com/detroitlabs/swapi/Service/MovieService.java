@@ -1,5 +1,6 @@
 package com.detroitlabs.swapi.Service;
 
+import com.detroitlabs.swapi.Model.HomeWorld;
 import com.detroitlabs.swapi.Model.Movie;
 import com.detroitlabs.swapi.Model.Character;
 import org.springframework.http.HttpEntity;
@@ -28,6 +29,16 @@ public class MovieService {
         headers.add(HttpHeaders.USER_AGENT, "spring");
 
         ResponseEntity<Character> response = restTemplate.exchange(characterURL + "?format=json", HttpMethod.GET, new HttpEntity<>(headers), Character.class);
+        return response.getBody();
+    }
+
+
+    public HomeWorld fetchHomeworld(String planetURL) {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.USER_AGENT, "spring");
+
+        ResponseEntity<HomeWorld> response = restTemplate.exchange(planetURL + "?format=json", HttpMethod.GET, new HttpEntity<>(headers), HomeWorld.class);
         return response.getBody();
     }
 

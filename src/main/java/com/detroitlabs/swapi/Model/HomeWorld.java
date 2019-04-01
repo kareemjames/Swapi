@@ -3,13 +3,13 @@ package com.detroitlabs.swapi.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Homeworld {
+public class HomeWorld {
 
     private String name;
 
     @Override
     public String toString() {
-        return "Homeworld{" +
+        return "HomeWorld{" +
                 "name='" + name + '\'' +
                 '}';
     }

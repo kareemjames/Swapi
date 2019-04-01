@@ -11,7 +11,7 @@ public class Character {
     private String gender;
     private String desc = "This an a description";
     private String url;
-    //private Homeworld homeworld;
+    private String homeworld;
 
     @Override
     public String toString() {
@@ -20,7 +20,7 @@ public class Character {
                 ", birthYear='" + birthYear + '\'' +
                 ", gender='" + gender + '\'' +
                 ", url='" + url + '\'' +
-                //", homeworld=" + homeworld +
+                ", String=" + homeworld +
                 '}';
     }
 
@@ -66,11 +66,11 @@ public class Character {
         this.url = url;
     }
 
-    //    public Homeworld getHomeworld() {
-//        return homeworld;
-//    }
-//
-//    public void setHomeworld(Homeworld homeworld) {
-//        this.homeworld = homeworld;
-//    }
+        public String getHomeworld() {
+        return homeworld;
+    }
+
+    public void setHomeworld(String homeworld) {
+        this.homeworld = homeworld;
+    }
 }
