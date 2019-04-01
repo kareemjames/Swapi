@@ -33,7 +33,7 @@ public class MovieService {
     }
 
 
-    public HomeWorld fetchHomeworld(String planetURL) {
+    public HomeWorld fetchHomeWorld(String planetURL) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.USER_AGENT, "spring");

@@ -66,10 +66,12 @@ public class Character {
         this.url = url;
     }
 
+    @JsonProperty("homeworld")
         public String getHomeWorld() {
         return homeWorld;
     }
 
+    @JsonProperty("homeworld")
     public void setHomeWorld(String homeWorld) {
         this.homeWorld = homeWorld;
     }
