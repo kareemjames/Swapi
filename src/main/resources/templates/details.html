@@ -82,27 +82,28 @@
 <!-- Page Content -->
 <div class="container">
 
-    <h1 class="my-4" th:text="${singleMovie.title}">Movie Title</h1>
-    <h2 class="my-4" th:text="${singleMovie.openingCrawl}">Opening Crawl</h2>
-    <!-- Marketing Icons Section -->
+    <!-- Features Section -->
     <div class="row">
-        <div class="col-lg-4 mb-4" th:each="character: ${characters}">
-            <div class="card h-100">
-                <h4 class="card-header" th:text="${character.name}">Name</h4>
-                <div class="card-body">
-                    <p class="card-text" th:text="${character.desc}">Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Sapiente esse necessitatibus neque.</p>
-                </div>
-                <div class="card-footer">
-                    <form action = "details" method="get">
-                            <input type="hidden" th:value="${character.url}" name ="url">
-                    <input type="submit" class="btn btn-primary" value="Details"/>
-                    </form>
-                </div>
-            </div>
+        <div class="col-lg-6">
+            <h2>Modern Business Features</h2>
+            <p>The Modern Business template by Start Bootstrap includes:</p>
+            <ul>
+                <li>
+                    <strong>Bootstrap v4</strong>
+                </li>
+                <li>jQuery</li>
+                <li>Font Awesome</li>
+                <li>Working contact form with validation</li>
+                <li>Unstyled page elements for easy customization</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+        </div>
+        <div class="col-lg-6">
+            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
         </div>
     </div>
     <!-- /.row -->
+
 </div>
 <!-- /.container -->
 
