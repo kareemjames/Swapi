@@ -35,11 +35,11 @@ public class MovieController {
         return "index";
     }
 
-    @ResponseBody
     @RequestMapping(value = {"/details", "details"})
     public String fetchCharacter(@RequestParam("url") String url, ModelMap modelMap) {
         Character fetchedCharacter = movieService.fetchCharacter(url);
-        return fetchedCharacter.toString();
+        modelMap.put("fetchedCharacter", fetchedCharacter);
+        return "details";
     }
 
 
