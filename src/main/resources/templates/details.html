@@ -88,13 +88,13 @@
             <h2 th:text="${fetchedCharacter.name}">Name</h2>
             <p th:text="${fetchedCharacter.desc}"></p>
             <ul>
-                <li th:text="${fetchedCharacter.birthYear}">jQuery</li>
-                <li th:text="${fetchedCharacter.gender}">Font Awesome</li>
-                <li th:text="${homeWorld.name}">Home World</li>
+                <li th:text=" 'Birth Year: ' + ${fetchedCharacter.birthYear}">BirthYear</li>
+                <li th:text=" 'Gender: ' + ${fetchedCharacter.gender}">Gender</li>
+                <li th:text=" 'Home World: ' + ${homeWorld.name}">HomeWorld</li>
             </ul>
         </div>
         <div class="col-lg-6">
-            <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+            <img class="img-fluid rounded" th:src="@{/img/cards.jpg}" alt="image card">
         </div>
     </div>
     <!-- /.row -->
