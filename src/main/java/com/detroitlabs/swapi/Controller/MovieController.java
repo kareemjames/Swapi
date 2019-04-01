@@ -38,7 +38,7 @@ public class MovieController {
     @RequestMapping(value = {"/details", "details"})
     public String fetchCharacter(@RequestParam("url") String url, ModelMap modelMap) {
         Character fetchedCharacter = movieService.fetchCharacter(url);
-        String homeWorldUrl = fetchedCharacter.getHomeworld();
+        String homeWorldUrl = fetchedCharacter.getHomeWorld();
         HomeWorld homeWorld = movieService.fetchHomeworld(homeWorldUrl);
 
         modelMap.put("fetchedCharacter", fetchedCharacter);
